@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kode</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link href="/files/css/base.css" rel="stylesheet" type="text/css">
+    <link href="/files/vendor/monaco-editor-v0.52.0/min/vs/editor/editor.main.css" rel="stylesheet" type="text/css">
+
+    <style>#editor { height: 100%; }</style>
+</head>
+<body>
+    <div id="editor"></div>
+
+    <!-- Monaco Editor -->
+    <script>var require = { paths: { 'vs': '/files/vendor/monaco-editor-v0.52.0/min/vs' } };</script>
+
+    <script src="/files/vendor/monaco-editor-v0.52.0/min/vs/loader.js"></script>
+    <script src="/files/vendor/monaco-editor-v0.52.0/min/vs/editor/editor.main.js"></script>
+
+    <script>
+        let __script__ = localStorage.getItem("script");
+
+        const editor = monaco.editor.create(
+            document.getElementById('editor'), {
+            value: !!__script__
+                ? __script__.substring(__script__.indexOf("*/") + 3)
+                : "alert(\"Hello, world!\");",
+            language: 'javascript',
+            minimap: { enable: false },
+            automaticLayout: true,
+            scrollBeyondLastLine: false,
+        });
+
+        fetch("/files/vendor/github/brijeshb42/monaco-themes/themes/Monokai.json")
+            .then(data => data.json())
+            .then(data => {
+                monaco.editor.defineTheme("monokai", data);
+                monaco.editor.setTheme("monokai");
+            })
+        ;
+    </script>
+
+    <!-- JavaScript-->
+    <script src="/files/js/editor.js"></script>
+</body>
+</html>
