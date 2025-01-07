@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2024  Marcus Alexander Dahl <@programkode>
+Copyright (C) 2025  Marcus Alexander Dahl <@programkode>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
