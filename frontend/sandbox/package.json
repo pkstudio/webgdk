@@ -7,7 +7,7 @@
     "dev": "bunx --bun vite",
     "build": "tsc && bunx --bun vite build",
     "preview": "bunx --bun vite preview",
-    "lint": "eslint \"src/**/*.ts\""
+    "lint": "bunx --bun eslint --fix \"src/**/*.ts\""
   },
   "devDependencies": {
     "@config/eslint": "workspace:*",

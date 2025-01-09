@@ -4,12 +4,12 @@
   "type": "module",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "bunx --bun vite",
     "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --fix"
+    "preview": "bunx --bun vite preview",
+    "build-only": "bunx --bun vite build",
+    "type-check": "bunx --bun vue-tsc --build --force",
+    "lint": "bunx --bun eslint . --fix"
   },
   "dependencies": {
     "@mdi/font": "7.4.47",

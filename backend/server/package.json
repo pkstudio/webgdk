@@ -1,16 +1,18 @@
 {
-  "name": "@pkstudio/backend-server",
-  "private": true,
-  "version": "1.0.50",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
-  },
-  "dependencies": {
-    "elysia": "latest"
-  },
-  "devDependencies": {
-    "bun-types": "latest"
-  },
-  "module": "src/index.js"
+    "name": "@pkstudio/backend-server",
+    "private": true,
+    "version": "0.1.0",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "bun run --watch src/index.ts",
+        "lint": "bunx --bun eslint --fix \"src/**/*.ts\""
+    },
+    "dependencies": {
+        "elysia": "latest"
+    },
+    "devDependencies": {
+        "@config/eslint": "workspace:*",
+        "bun-types": "latest"
+    },
+    "module": "src/index.js"
 }
