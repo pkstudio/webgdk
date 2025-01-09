@@ -21,7 +21,7 @@ Use `CTRL/CMD + S` to open an editor (opens up a pop-up window, might need to al
 To build all apps and packages, run the following command:
 
 ```
-pnpm build
+bun build
 ```
 
 ### Develop
@@ -29,6 +29,6 @@ pnpm build
 To develop all apps and packages, run the following command:
 
 ```
-pnpm dev
+bun dev
 ```
 
