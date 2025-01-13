@@ -5,6 +5,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "bunx --bun vite",
+    "dev:desktop": "cargo tauri init",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "bunx --bun vite preview",
     "build-only": "bunx --bun vite build",
